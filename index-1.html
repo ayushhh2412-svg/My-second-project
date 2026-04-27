@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EmojiCrush 🎮</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="bg-blobs">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <!-- SCREEN: START -->
+  <div class="screen" id="startScreen">
+    <div class="logo-wrap">
+      <div class="logo-emoji">🎮</div>
+      <h1 class="logo-title">EmojiCrush</h1>
+      <p class="logo-sub">Match 3 emojis to score!</p>
+    </div>
+    <div class="how-to">
+      <div class="how-item">🖱️ Click two adjacent emojis to swap</div>
+      <div class="how-item">🔗 Match 3+ in a row to crush!</div>
+      <div class="how-item">⏱️ 60 seconds — score as high as you can!</div>
+    </div>
+    <button class="btn-start" id="startBtn">Play Now! 🚀</button>
+  </div>
+
+  <!-- SCREEN: GAME -->
+  <div class="screen hidden" id="gameScreen">
+    <div class="hud">
+      <div class="hud-box">
+        <span class="hud-label">Score</span>
+        <span class="hud-val" id="scoreVal">0</span>
+      </div>
+      <div class="hud-box timer-box">
+        <span class="hud-label">Time</span>
+        <span class="hud-val" id="timerVal">60</span>
+      </div>
+      <div class="hud-box">
+        <span class="hud-label">Best</span>
+        <span class="hud-val" id="bestVal">0</span>
+      </div>
+    </div>
+
+    <div class="board-wrap">
+      <div class="board" id="board"></div>
+    </div>
+
+    <div class="combo-toast hidden" id="comboToast"></div>
+  </div>
+
+  <!-- SCREEN: GAMEOVER -->
+  <div class="screen hidden" id="overScreen">
+    <div class="over-card">
+      <div class="over-emoji" id="overEmoji">🏆</div>
+      <h2 class="over-title">Time's Up!</h2>
+      <div class="over-score-wrap">
+        <span class="over-label">Your Score</span>
+        <span class="over-score" id="overScore">0</span>
+      </div>
+      <div class="over-best-wrap" id="overBestWrap">
+        <span class="over-best" id="overBestMsg"></span>
+      </div>
+      <button class="btn-start" id="playAgainBtn">Play Again 🔄</button>
+      <button class="btn-menu" id="menuBtn">Menu 🏠</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
